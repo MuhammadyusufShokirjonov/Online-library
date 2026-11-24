@@ -34,7 +34,7 @@ class AdminBookController extends Controller
 
         $fileKey = (string) Str::uuid();
 
-        $pdfPath = $request->file('pdf')->storeAs('private/books', $fileKey . '.pdf');
+        $pdfPath = $request->file('pdf')->storeAs('books', $fileKey . '.pdf');
 
         $pageCount = 32; 
         try {
